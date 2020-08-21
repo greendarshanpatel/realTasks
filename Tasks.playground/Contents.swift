@@ -43,3 +43,27 @@ var a = [1,2,3,4,5]
 var b = [2,2,1,2,1]
 print(removeSmallest(array: &a))
 print(removeSmallest(array: &b))
+
+/// Problem : 3
+///References: https://developer.apple.com/documentation/swift/arrayslice
+func splitAlphabetsAndNumericals(string: String) -> [Any] {
+    let characterArray = Array(string)
+    let indexOfLastLetter = characterArray.lastIndex(where: {c in c.isLetter})
+    
+    //or
+    //if the split is supposed to happen from the middle
+//    let midPoint = characterArray.count/2
+    
+    let firstSplit = characterArray[0..<indexOfLastLetter! + 1]
+    let secondSplit = characterArray[indexOfLastLetter!+1..<characterArray.count]
+    
+    var returnArray: [Any] = []
+    returnArray.append(String(firstSplit))
+    if let secondSplitInt = Int(String(secondSplit)) {
+        returnArray.append(secondSplitInt)
+    }
+    return returnArray
+}
+
+print(splitAlphabetsAndNumericals(string: "NCBMNH11"))
+print(splitAlphabetsAndNumericals(string: "abc176"))
