@@ -79,4 +79,5 @@ func replaceVowels(string: String, replaceWith: Character) -> String {
     })
 }
 
-print(replaceVowels(string: "DarshanPatel aeiou", replaceWith: "$"))
+print(replaceVowels(string: "Waterloo AEIOU aeiou", replaceWith: "$"))
+print(replaceVowels(string: "real pineapple 12345 aeiou", replaceWith: "$"))
