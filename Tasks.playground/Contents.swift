@@ -15,7 +15,7 @@ class theLoneSurvivor {
         var killIndex = 0
         var people = self.lineUp(numberOfPeople: numberOfPeople)
 
-        //  solution of the problem is in recursive pattern and this while loop does the required removal of one patten in each cycle.
+        //  solution of the problem is in recursive pattern and this while loop does the required removal of one pattern in each cycle untill only one survivor exist.
         while (people.count > 1) {
             killIndex = (killIndex + spacing - 1) % people.count
             people.remove(at: killIndex)
