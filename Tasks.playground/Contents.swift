@@ -1,5 +1,4 @@
 ///Problem : 5
-
 class theLoneSurvivor {
  
     // function to Line up All soldiers in circle and returning an Array
@@ -28,3 +27,19 @@ class theLoneSurvivor {
 theLoneSurvivor.execute(numberOfPeople: 41, spacing: 2)
 theLoneSurvivor.execute(numberOfPeople: 35, spacing: 11)
 theLoneSurvivor.execute(numberOfPeople: 11, spacing: 1)
+
+///Problem 2
+func removeSmallest(array: inout [Int]) -> [Int] {
+    // finding minimim number
+    guard let minNumber = array.min() else { return [] }
+    // geting the indix of minimum number
+    guard let minNumberIndex = array.firstIndex(of: minNumber) else { return [] }
+    //removing that minimum number
+    array.remove(at: minNumberIndex)
+    return array
+}
+
+var a = [1,2,3,4,5]
+var b = [2,2,1,2,1]
+print(removeSmallest(array: &a))
+print(removeSmallest(array: &b))
