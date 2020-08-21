@@ -67,3 +67,16 @@ func splitAlphabetsAndNumericals(string: String) -> [Any] {
 
 print(splitAlphabetsAndNumericals(string: "NCBMNH11"))
 print(splitAlphabetsAndNumericals(string: "abc176"))
+
+///Problem : 1
+import Foundation
+
+func replaceVowels(string: String, replaceWith: Character) -> String {
+    let vowels: [Character] = ["a", "A", "e","E","i", "I", "o","O","u","U"]
+    // Using Generic instance method of String class to map each character and replacing it with character
+    return String(string.map { character in
+        vowels.contains(character) ? replaceWith : character
+    })
+}
+
+print(replaceVowels(string: "DarshanPatel aeiou", replaceWith: "$"))
