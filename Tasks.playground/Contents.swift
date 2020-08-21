@@ -81,3 +81,10 @@ func replaceVowels(string: String, replaceWith: Character) -> String {
 
 print(replaceVowels(string: "Waterloo AEIOU aeiou", replaceWith: "$"))
 print(replaceVowels(string: "real pineapple 12345 aeiou", replaceWith: "$"))
+
+/// Problem :  4
+func findCommon(a: [Int], b: [Int]) -> [Int] {
+    return a.filter(b.contains)
+}
+print(findCommon(a: [1,2,3,4,5], b: [2,6,3,5,1]))
+print(findCommon(a: [2,3,4,5], b: [2,0,6,3,5,1]))
